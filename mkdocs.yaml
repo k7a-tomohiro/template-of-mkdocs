@@ -1,0 +1,131 @@
+site_name: MkDocs Template Page
+site_url: https://k7a-tomohiro.github.io/template-of-mkdocs/
+site_description: MkDocs template.
+site_author: k7a-tomohiro
+copyright: Copyright &copy; 2025 k7a-tomohiro.
+repo_name: k7a-tomohiro
+repo_url: https://github.com/k7a-tomohiro/template-of-mkdocs/
+edit_uri: edit/main/docs/
+
+docs_dir: "./docs"
+strict: false
+
+extra_css:
+  - ./_customize/mkdocs.css
+extra_javascript:
+  - ./_customize/mkdocs.js
+  - ./_customize/mathjax.js
+  - ./_customize/mermaid.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+exclude_docs: |
+  .gitignore
+  .gitkeep
+  *.drawio
+
+theme:
+  name: material
+  locale: en
+  highlightjs: true
+  logo: static/logo.svg
+  favicon: static/logo.svg
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - search.highlight
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.expand
+    - navigation.path
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - toc.follow
+
+plugins:
+  - search
+  - tags
+  # - blog # blog plugin is not compatible with mkdocs-static-i18n
+  - i18n:
+      languages:
+        - locale: en
+          name: "English"
+          default: true
+        - locale: ja
+          name: "日本語"
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - tables
+  - smarty
+  - admonition
+  - meta
+  - toc:
+      permalink: true
+      title: Table of Contents
+  - pymdownx.tasklist
+  - pymdownx.emoji
+  - pymdownx.details
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.blocks.caption
+  - pymdownx.keys
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.inlinehilite
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.snippets:
+      base_path: "./docs"
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/k7a-tomohiro
+
+nav:
+  - Menu1:
+      - menu1/index.md
+      - Markdown: menu1/markdown/index.md
+      - Mermaid: menu1/mermaid/index.md
+      - Math: menu1/math/index.md
+      - Snippet: menu1/snippet/index.md
+      - Extension: menu1/extension/index.md
+  - Menu2:
+      - menu2/index.md
+  - Menu3:
+      - menu3/index.md
