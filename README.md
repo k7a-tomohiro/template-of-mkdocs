@@ -14,6 +14,8 @@ Visit the website **[https://k7a-tomohiro.github.io/template-of-mkdocs/](https:/
 
 **Run**
 
+- `git clone https://k7a-tomohiro.github.io/template-of-mkdocs/`
+- `cd template-of-mkdocs`
 - `pip install mkdocs mkdocs-material mkdocs-material-extensions mkdocs-static-i18n`
 - `mkdocs serve`
 - Access `localhost:8000` (default)
