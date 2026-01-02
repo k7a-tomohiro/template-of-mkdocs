@@ -19,3 +19,5 @@ Visit the website **[https://k7a-tomohiro.github.io/template-of-mkdocs/](https:/
 - `pip install mkdocs mkdocs-material mkdocs-material-extensions mkdocs-static-i18n`
 - `mkdocs serve`
 - Access `localhost:8000` (default)
+
+Note: `venv/` and `.venv/` are written in gitignore for convenience.
