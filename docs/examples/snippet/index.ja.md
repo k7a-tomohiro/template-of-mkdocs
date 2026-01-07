@@ -2,7 +2,7 @@
 
 https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets
 
-### block style
+## block style
 
 ```go
 package main
@@ -14,13 +14,13 @@ func main() {
 }
 ```
 
-### import from file
+## import from file
 
 ```go
 --8<-- "examples/snippet/main.go"
 ```
 
-### import from file with line range
+## import from file with line range
 
 ```go
 --8<-- "examples/snippet/main.go:5:7"
